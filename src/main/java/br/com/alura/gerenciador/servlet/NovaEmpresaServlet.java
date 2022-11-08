@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class NovaEmpresaServlet extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		System.out.println("Cadastrando nova empresa");
 		String nomeEmpresa = request.getParameter("nome");
 		PrintWriter out = response.getWriter();
