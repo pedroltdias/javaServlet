@@ -7,11 +7,8 @@
 <title>Nova Empresa Criada JSP</title>
 </head>
 <body>
-<% 
-	String nomeEmpresa = (String)request.getAttribute("empresa");
-%>
 
-Empresa <%= nomeEmpresa %> cadastrada com sucesso!
+Empresa ${ empresa } cadastrada com sucesso!
 
 </body>
 </html>
