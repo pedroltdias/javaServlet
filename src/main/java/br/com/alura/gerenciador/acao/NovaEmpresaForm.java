@@ -1,26 +1,19 @@
 package br.com.alura.gerenciador.acao;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class MostraEmpresa {
+public class NovaEmpresaForm {
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Mostrando dados da empresa");
-		
-		String paramId = request.getParameter("id");
-		Integer id = Integer.valueOf(paramId);
-		
-		Banco banco = new Banco();
-		Empresa empresa = banco.buscaEmpresaPeloId(id);
-		
-		request.setAttribute("empresa", empresa);
-		
-		return "foward:formAlteraEmpresa.jsp";	
+		System.out.println("Form nova empresa");	
+		return "foward:formNovaEmpresa.jsp";
 	}
 }
